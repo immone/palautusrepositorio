@@ -15,7 +15,7 @@ class ProjectReader:
         devdeps	 = content2["tool"]["poetry"]["dev-dependencies"]
         name = content2["tool"]["poetry"]["name"]
         desc = content2["tool"]["poetry"]["description"]
-        print("asDASADSDSADASDDSDDSAd", content2)
+        ##print("asDASADSDSADASDDSDDSAd", content2)
         ##print(content2["tool"]["poetry"]["dependencies"]["tool.poetry.dependencies"])
 
         # deserialisoi TOML-formaatissa oleva merkkijono ja muodosta Project-olio sen tietojen perusteella
