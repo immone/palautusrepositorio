@@ -1,0 +1,15 @@
+[[package]]
+name = "rtoml"
+version = "0.9.0"
+description = ""
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[metadata]
+lock-version = "1.1"
+python-versions = "^3.8"
+content-hash = "8ae9cca9b90a99178384e4de4ef3f87e3209d294913a71d4cf9f6be718cb132b"
+
+[metadata.files]
+rtoml = []
