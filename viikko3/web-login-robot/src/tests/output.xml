@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.1 (Python 3.8.5 on darwin)" generated="20221121 22:14:54.372" rpa="false" schemaversion="3">
+<suite id="s1" name="Login" source="/Users/antti.immonen/ohtu/palautusrepositorio/viikko3/web-login-robot/src/tests/login.robot">
+<kw name="Open And Configure Browser" library="resource" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221121 22:14:54.643" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20221121 22:14:54.643" endtime="20221121 22:14:58.027"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20221121 22:14:58.027" endtime="20221121 22:14:58.169"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20221121 22:14:58.169" endtime="20221121 22:14:58.170"/>
+</kw>
+<status status="PASS" starttime="20221121 22:14:54.643" endtime="20221121 22:14:58.170"/>
+</kw>
+<test id="s1-t1" name="Login With Correct Credentials" line="8">
+<kw name="Create User And Go To Login Page" type="SETUP">
+<kw name="Create User" library="AppLibrary">
+<arg>kalle</arg>
+<arg>kalle123</arg>
+<status status="PASS" starttime="20221121 22:14:58.172" endtime="20221121 22:14:58.179"/>
+</kw>
+<kw name="Go To Login Page" library="resource">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${LOGIN URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20221121 22:14:58.180" level="INFO">Opening url 'http://localhost:5000/login'</msg>
+<status status="PASS" starttime="20221121 22:14:58.179" endtime="20221121 22:14:58.850"/>
+</kw>
+<status status="PASS" starttime="20221121 22:14:58.179" endtime="20221121 22:14:58.850"/>
+</kw>
+<kw name="Login Page Should Be Open" library="resource">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Login</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20221121 22:15:00.267" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20221121 22:15:00.268" level="FAIL">Title should have been 'Login' but was 'localhost'.</msg>
+<status status="FAIL" starttime="20221121 22:14:58.851" endtime="20221121 22:15:00.271"/>
+</kw>
+<status status="FAIL" starttime="20221121 22:14:58.851" endtime="20221121 22:15:00.272"/>
+</kw>
+<status status="FAIL" starttime="20221121 22:14:58.171" endtime="20221121 22:15:00.272"/>
+</kw>
+<status status="FAIL" starttime="20221121 22:14:58.170" endtime="20221121 22:15:00.272">Setup failed:
+Title should have been 'Login' but was 'localhost'.</status>
+</test>
+<test id="s1-t2" name="Login With Incorrect Password" line="14">
+<kw name="Create User And Go To Login Page" type="SETUP">
+<kw name="Create User" library="AppLibrary">
+<arg>kalle</arg>
+<arg>kalle123</arg>
+<status status="PASS" starttime="20221121 22:15:00.274" endtime="20221121 22:15:00.280"/>
+</kw>
+<kw name="Go To Login Page" library="resource">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${LOGIN URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20221121 22:15:00.280" level="INFO">Opening url 'http://localhost:5000/login'</msg>
+<status status="PASS" starttime="20221121 22:15:00.280" endtime="20221121 22:15:00.811"/>
+</kw>
+<status status="PASS" starttime="20221121 22:15:00.280" endtime="20221121 22:15:00.811"/>
+</kw>
+<kw name="Login Page Should Be Open" library="resource">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Login</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20221121 22:15:02.186" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20221121 22:15:02.187" level="FAIL">Title should have been 'Login' but was 'localhost'.</msg>
+<status status="FAIL" starttime="20221121 22:15:00.811" endtime="20221121 22:15:02.187"/>
+</kw>
+<status status="FAIL" starttime="20221121 22:15:00.811" endtime="20221121 22:15:02.187"/>
+</kw>
+<status status="FAIL" starttime="20221121 22:15:00.273" endtime="20221121 22:15:02.187"/>
+</kw>
+<status status="FAIL" starttime="20221121 22:15:00.273" endtime="20221121 22:15:02.187">Setup failed:
+Title should have been 'Login' but was 'localhost'.</status>
+</test>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20221121 22:15:02.188" endtime="20221121 22:15:02.749"/>
+</kw>
+<status status="FAIL" starttime="20221121 22:14:54.373" endtime="20221121 22:15:02.750"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="2" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="2" skip="0" id="s1" name="Login">Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
