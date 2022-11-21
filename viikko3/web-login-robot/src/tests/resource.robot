@@ -35,9 +35,9 @@ Register Page Should Be Open
     Title Should Be  Register
 
 Register User
-   [Arguments]  ${username}  ${pwo}  ${pwt}
+   [Arguments]  ${username}  ${pwo}  ${pwtkk}
    Go To  ${REGISTER URL}
-   Set Username  username
-   Set Password  pwo
-   Input Password  password_confirmation  ${pwt}
+   Input Text  username  ${username}
+   Input Password  password  ${pwo}
+   Input Password  password_confirmation  ${pwtkk}
    Click Button  Register
