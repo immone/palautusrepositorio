@@ -13,14 +13,17 @@ class Ostoskori:
         return len(self.ostokset)
 
     def hinta(self):
-        return 0
+        sum = 0
+        for e in self.ostokset:
+            sum += e._saldo*e._hinta
+        return sum
         # kertoo korissa olevien ostosten yhteenlasketun hinnan
 
     def lisaa_tuote(self, lisattava: Tuote):
-        # lisää tuotteen
         if lisattava in self.ostokset:
             self.ostokset[lisattava].saldo += 1
         else:
+            lisattava._saldo = 1
             self.ostokset.append(lisattava)
 
     def poista_tuote(self, poistettava: Tuote):
