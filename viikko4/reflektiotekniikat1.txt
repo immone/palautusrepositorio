@@ -1,0 +1,8 @@
+Retrospektiivitekniikat
+
+Retrospektiivitekniikoilla tarkoitetaan pääsääntöisesti eri lähestysmistapoja siihen, kuinka jonkun suunnittelu- tai toteutustavan aikana (Scrumissa sprintit) reflektoidaan tiimin kanssa. Esimerkkinä tekniikoista ovat Start, Stop, Continue, More of, Less of Wheel ja Glad, Sad, Mad. 
+
+Tekniikat voivat erota pituudeltaan, sisällöltään, siinä käytettäviltä instrumenteilta (kortit jne.) sekä siihen valmistautumiselta. Glad, Sad, Mad on enintään tunnin pituinen reflektiohetki, missä mielivaltaiset havainnot jaetaan tekniikan nimen mukaiseen kolmeen kategoriaan ja listataan prioriteettijärjestykseen.
+
+Start, Stop, Continue, More of, Less of Wheel-tekniikassa ajatuksena on puolestaan miettiä käänteisesti minkälaisia asioita tiimin kuuluisi tehdä enemmän, vähemmän tai lopettaa kokonaan tekemästä. Tässä tekniikassa käytetty aika on huomattavasti lyhyempi (noin 10-30 minuuttia). 
+
