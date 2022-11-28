@@ -21,18 +21,23 @@ class Ostoskori:
 
     def lisaa_tuote(self, lisattava: Tuote):
         if lisattava in self.kori:
-            self.kori[lisattava]._saldo += 1
+            lisattava._saldo += 1
         else:
             lisattava._saldo = 1
             self.kori.append(lisattava)
 
     def poista_tuote(self, poistettava: Tuote):
-        # poistaa tuotteen
-        pass
-
+        if poistettava in self.kori:
+            if poistettava._saldo > 1:
+                poistettava._saldo -= 1
+            else:
+                poistettava._saldo = 0
+                self.kori.remove(poistettava)
+        print(self.kori)
     def tyhjenna(self):
-        pass
-        # tyhjentää ostoskorin
+        for e in self.kori:
+            e._saldo = 0
+        self.kori = []
 
     def ostokset(self):
         return self.kori
